@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
         questionsDiv.innerHTML = '';
         const problems = [];
         for (let i = 1; i <= 10; i++) {
-            const problem = generateProblem();
+            const problem = generateProblem(currentDifficulty);
             problems.push(problem);
             questionsDiv.innerHTML += `
         <div class="row mb-3 align-items-center">
@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.dropdown-item').forEach(item => {
         item.addEventListener('click', (e) => {
             e.preventDefault;
-            currentDifficulty - e.target.id;
+            currentDifficulty = e.target.id;
             dropdownButton.textContent = e.target.textContent;
             problems = generateQuestions();
         });
