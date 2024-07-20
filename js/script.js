@@ -88,5 +88,6 @@ document.addEventListener('DOMContentLoaded', () => {
         result.innerHTML = `<div class="${alert}" role="alert">
             You got ${score} out of 10 correct!
         </div>`;
+        window.scrollTo(0, document.body.scrollHeight);
     });
 });
