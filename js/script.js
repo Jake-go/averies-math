@@ -44,14 +44,16 @@ document.addEventListener('DOMContentLoaded', () => {
             const problem = generateProblem(currentDifficulty);
             problems.push(problem);
             questionsDiv.innerHTML += `
-        <div class="row mb-3 align-items-center">
-            <div class="col-auto">
-                <label for="q${i}" class="col-form-label">${i}. ${problem.num1} ${problem.operator} ${problem.num2} =</label>
+            <div class="col">
+                <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Question ${i}</h5>
+                    <div class="input-group">
+                        <span class="input-group-text">${problem.num1} ${problem.operator} ${problem.num2} =</span>
+                        <input type="number" min="0" class="form-control" id="q${i}" name="q${i}" required>
+                    </div>    
+                </div>
             </div>
-            <div class="col-auto">
-                <input type="number" class="form-control" id="q${i}" name="q${i}" required style="width: 200px;">
-            </div>
-        </div>
         `;
         }
         return problems;
