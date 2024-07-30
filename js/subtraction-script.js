@@ -27,7 +27,7 @@ function generateProblem(difficulty) {
     return {
         num1: Math.max(num1, num2),  // Ensure larger number comes first for subtraction
         num2: Math.min(num1, num2),
-        answer: (Math.max(num1, num2) - Math.min(num1, num2))
+        answer: (Math.max(num1, num2) - Math.min(num1, num2)),
     };
 }
 
@@ -40,7 +40,7 @@ function generateQuestions() {
         problems.push(problem);
         questionsDiv.innerHTML += `
         <div class="col">
-            <div class="card">
+            <div id="card${i}" class="card">
             <div class="card-body">
                 <h5 class="card-title">Question ${i}</h5>
                 <div class="input-group">
@@ -51,6 +51,7 @@ function generateQuestions() {
         </div>
     `;
     }
+    console.log(problems);
     return problems;
 }
 
@@ -73,7 +74,13 @@ document.querySelectorAll('.dropdown-item').forEach(item => {
         const inputs = form.querySelectorAll('input[type="number"]');
         inputs.forEach((input, index) => {
             const userAnswer = parseInt(input.value);
-            if (userAnswer === problems[index].answer) score++;
+            const card = document.getElementById(`card${index + 1}`);
+            if (userAnswer === problems[index].answer) {
+                score++;
+                card.className = "card text-white bg-success";
+            } else {
+                card.className = "card text-white bg-danger";
+            }
         });
         if (score >= 7) {
             alert = "alert alert-success";

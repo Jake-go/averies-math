@@ -51,6 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
         `;
         }
+        console.log(problems);
         return problems;
     }
 
