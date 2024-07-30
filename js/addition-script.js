@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
             problems.push(problem);
             questionsDiv.innerHTML += `
             <div class="col">
-                <div class="card">
+                <div id="card${i}" class="card">
                 <div class="card-body">
                     <h5 class="card-title">Question ${i}</h5>
                     <div class="input-group">
@@ -51,7 +51,6 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
         `;
         }
-        console.log(problems);
         return problems;
     }
 
@@ -66,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Handle form submission
+    // Check Answers
     form.addEventListener('submit', (e) => {
         e.preventDefault();
         let score = 0;
@@ -74,7 +73,13 @@ document.addEventListener('DOMContentLoaded', () => {
         const inputs = form.querySelectorAll('input[type="number"]');
         inputs.forEach((input, index) => {
             const userAnswer = parseInt(input.value);
-            if (userAnswer === problems[index].answer) score++;
+            const card = document.getElementById(`card${index + 1}`);
+            if (userAnswer === problems[index].answer) {
+                score++
+                card.className = "card text-white bg-success";
+            } else {
+                card.className = "card text-white bg-danger";
+            }
         });
         if (score >= 7) {
             alert = "alert alert-success";

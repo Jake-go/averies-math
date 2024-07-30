@@ -51,7 +51,6 @@ function generateQuestions() {
         </div>
     `;
     }
-    console.log(problems);
     return problems;
 }
 
@@ -66,7 +65,7 @@ document.querySelectorAll('.dropdown-item').forEach(item => {
     });
 });
 
-// Handle form submission
+// Check Answers
     form.addEventListener('submit', (e) => {
         e.preventDefault();
         let score = 0;
