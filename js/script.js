@@ -81,9 +81,9 @@ document.addEventListener('DOMContentLoaded', () => {
             const card = document.getElementById(`card${index + 1}`);
             if (userAnswer === problems[index].answer) {
                 score++;
-                card.className = "card border-success";
+                card.className = "card text-white bg-success";
             } else {
-                card.className = "card border-danger";
+                card.className = "card text-white bg-danger";
             }
         });
         if (score >= 7) {
