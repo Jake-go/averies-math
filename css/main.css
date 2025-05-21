@@ -43,18 +43,22 @@ body {
 }
 
 #menu[data-active-index="0"]>#menu-background-pattern {
-    background-position: 0% -25%;
+    background-position: 0% -20%;
 }
 
 #menu[data-active-index="1"]>#menu-background-pattern {
-    background-position: 0% -50%;
+    background-position: 0% -40%;
 }
 
 #menu[data-active-index="2"]>#menu-background-pattern {
-    background-position: 0% -75%;
+    background-position: 0% -60%;
 }
 
 #menu[data-active-index="3"]>#menu-background-pattern {
+    background-position: 0% -80%;
+}
+
+#menu[data-active-index="4"]>#menu-background-pattern {
     background-position: 0% -100%;
 }
 
@@ -97,17 +101,25 @@ body {
 }
 
 #menu[data-active-index="0"]>#menu-background-image {
-    background-position: center 45%;
+    background-position: center 40%;
 }
 
 #menu[data-active-index="1"]>#menu-background-image {
-    background-position: center 50%;
+    background-position: center 45%;
 }
 
 #menu[data-active-index="2"]>#menu-background-image {
-    background-position: center 55%;
+    background-position: center 50%;
 }
 
 #menu[data-active-index="3"]>#menu-background-image {
+    background-position: center 55%;
+}
+
+#menu[data-active-index="4"]>#menu-background-image {
     background-position: center 60%;
+}
+
+#menu[data-active-index="5"]>#menu-background-image {
+    background-position: center 65%;
 }
