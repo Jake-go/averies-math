@@ -18,6 +18,9 @@ function generateProblem(difficulty) {
         case 'hard':
             range = 100;
             break;
+        case 'extra hard':
+            range = 500;
+            break;
         default:
             range = 10;
     }
