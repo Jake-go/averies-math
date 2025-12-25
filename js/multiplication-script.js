@@ -18,6 +18,9 @@ document.addEventListener('DOMContentLoaded', () => {
             case 'hard':
                 range = 20;
                 break;
+            case 'extra hard':
+                range = 50;
+                break;
             default:
                 range = 5;
         }

@@ -10,13 +10,13 @@ function generateProblem(difficulty) {
     let range;
     switch (difficulty) {
         case 'easy':
-            range = 10;
-            break;
-        case 'medium':
             range = 20;
             break;
-        case 'hard':
+        case 'medium':
             range = 50;
+            break;
+        case 'hard':
+            range = 100;
             break;
         default:
             range = 10;

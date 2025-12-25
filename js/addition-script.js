@@ -10,13 +10,16 @@ document.addEventListener('DOMContentLoaded', () => {
         let range;
         switch (difficulty) {
             case 'easy':
-                range = 10;
+                range = 25;
                 break;
             case 'medium':
-                range = 20;
+                range = 100;
                 break;
             case 'hard':
-                range = 50;
+                range = 500;
+                break;
+            case 'extra hard':
+                range = 1000;
                 break;
             default:
                 range = 10;
